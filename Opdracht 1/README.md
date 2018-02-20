@@ -6,7 +6,7 @@ Deze heb ik uitgewerkt in HTML, CSS en Javascript om te kunnen testen in Chrome 
 
 Hierbij heb ik de volgende voorbeelden gebruikt:
 * Demo van uitkappende zoekbalk wanneer er op vergrootglas wordt geklikt: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
-* Principles 4 & 11 van User Interface Design: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
+* Priciples 4 & 11 van User Interface Design: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
 
 ![Voorvertoning van de studentenhuizen site](preview.png)
 
@@ -16,13 +16,17 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 
 
 # Mijn proces
-Na het laten testen van mijn eerste versie door een vriend (die geen CMD studeerd), was het al snel duidelijk dat hij de opdracht die ik hem gaf niet geheel begreep doordat er nog Lorem Ipsum stond in deze versie. Ik vroeg hem om de 'omschrijving' uit te klappen en hiermee de gehele omschrijving te tonen. Ook was er hierbij nog geen kopje 'omschrijving'. Dus in de tweede versie heb ik het lorem ipsum vervangen en een kopje 'omschrijving' toegevoegd.
 
-Bij het testen van de tweede versie was deze onduidelijkheid opgelost. Ook de neutralere kleuren bevielen beter. Echter ontstond er nog onduidelijkheid bij de tekst 'Sluit' die ontstaat nadat de omschrijving was uitgeklapt. Vandaar de keuze om in de derde versie deze 'Sluit' tekst te vervangen met de tekst 'Lees minder'
+## 2. Aanpassingen na testen eerste versie
+Na het laten testen van mijn [eerste versie](https://github.com/lucasberghoef/Frontend-voor-Designers/tree/master/Opdracht%201/V1) door een vriend (die geen CMD studeerd), was het al snel duidelijk dat hij de opdracht die ik hem gaf niet geheel begreep doordat er nog Lorem Ipsum stond in deze versie. Ik vroeg hem om de 'omschrijving' uit te klappen en hiermee de gehele omschrijving te tonen. Ook was er hierbij nog geen kopje 'omschrijving'. Dus in de tweede versie heb ik het lorem ipsum vervangen en een kopje 'omschrijving' toegevoegd.
+
+## 3. Aanpassingen na testen tweede versie
+Bij het testen van de [tweede versie](https://github.com/lucasberghoef/Frontend-voor-Designers/tree/master/Opdracht%201/V2) was deze onduidelijkheid opgelost. Ook de neutralere kleuren bevielen beter. Echter ontstond er nog onduidelijkheid bij de tekst 'Sluit' die ontstaat nadat de omschrijving was uitgeklapt. Vandaar de keuze om in de derde versie deze 'Sluit' tekst te vervangen met de tekst 'Lees minder'
+
 
 # To Do
 
-* 1. Toevoegen van animatie 'uitschuiven' bij 'Lees meer'
+* 1. Toevoegen animatie bij 'uitschuiven' van de 'Lees meer' knop.
 
 # License
 
