@@ -11,11 +11,17 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 ![Voorvertoning van de studentenhuizen site](preview.png)
 
 # Functies
+
 * [`document.querySelector()`](https://developer.mozilla.org/nl/docs/Web/API/Document/querySelector)- Geeft het eerste element in het document dat overeenkomt met de opgegeven selector, of groep van selectors, of null als er geen overeenkomsten zijn gevonden.
 * [`.addEventListener('click', handleClick)`](https://developer.mozilla.org/en-US/docs/Web/API/EventListener)- The EventListener interface represents an object that can handle an event dispatched by an EventTarget object.
 
 
 # Mijn proces
+
+Na het ontvangen van de opdracht ben ik begonnen met de Html te schrijven. Ik heb gekozen voor het maken van de website voor de iPhone X en deze test ik in de Chrome browser.
+
+## 1. Opzetten site
+Na het bekijken van de voorbeelden op Moodle heb ik de javascript opgezet met een querySelectorom een element in mijn html te selecteren. Vervolgens heb ik daar een eventListener aan gekoppeld die een click detecteerd en daar vervolgens de actie op uit te voeren.
 
 ## 2. Aanpassingen na testen eerste versie
 Na het laten testen van mijn [eerste versie](https://github.com/lucasberghoef/Frontend-voor-Designers/tree/master/Opdracht%201/V1) door een vriend (die geen CMD studeerd), was het al snel duidelijk dat hij de opdracht die ik hem gaf niet geheel begreep doordat er nog Lorem Ipsum stond in deze versie. Ik vroeg hem om de 'omschrijving' uit te klappen en hiermee de gehele omschrijving te tonen. Ook was er hierbij nog geen kopje 'omschrijving'. Dus in de tweede versie heb ik het lorem ipsum vervangen en een kopje 'omschrijving' toegevoegd.
