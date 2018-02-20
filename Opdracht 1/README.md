@@ -6,7 +6,7 @@ Deze heb ik uitgewerkt in HTML, CSS en Javascript om te kunnen testen in Chrome 
 
 Hierbij heb ik de volgende voorbeelden gebruikt:
 * Demo van uitkappende zoekbalk wanneer er op vergrootglas wordt geklikt: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
-* Priciples 4 & 11 van User Interface Design: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
+* Principles 4 & 11 van User Interface Design: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
 
 ![Voorvertoning van de studentenhuizen site](preview.png)
 
