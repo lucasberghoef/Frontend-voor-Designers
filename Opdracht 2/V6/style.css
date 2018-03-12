@@ -1,0 +1,187 @@
+/* SOURCE:
+Vertical align een div: https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  font-family: 'Lato', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+
+  background-color: rgb(250, 250, 250);
+  margin: 0;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+  color: rgb(255, 255, 255);
+  font-family: 'Oswald', sans-serif;
+  font-size: 7.2rem;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+p {
+  color: rgb(185, 185, 185);
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  top: 0;
+  transition: top 1s ease-out;
+}
+
+.frame {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(30, 30, 30);
+  background-size: cover;
+  background-position: center center;
+}
+
+.frame::before {
+  display: block;
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.frame.active .content {
+  opacity: 1.0;
+  transform: translateY(0);
+}
+
+#hero {
+  background-image:url('Background Desktop_08.jpg');
+}
+
+#case1 {
+  background-image:url('http://www.lucasberghoef.com/wp-content/uploads/2017/11/Background-Hero.jpg');
+}
+
+#case2 {
+  background-image:url('http://www.lucasberghoef.com/wp-content/uploads/2016/11/Background-Hero-1.jpg');
+}
+
+#case3 {
+  background-image:url('http://www.lucasberghoef.com/wp-content/uploads/2016/11/Logo-Hero-02.png');
+  background-color: rgb(131, 201, 172);
+}
+
+#about {
+  background-image:url('Background Desktop_08.jpg');
+}
+
+.content {
+  width: 100%;
+  max-width: 640px;
+  color: white;
+  text-align: center;
+  opacity: 0.0;
+  transform: translateY(50%);
+  transition: all 1s ease-out .5s;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  min-height: 200px;
+  height: 25vh;
+}
+
+.button-container.top {
+  top: 0;
+  align-items: flex-start;
+}
+
+.button-container.bottom {
+  bottom: 0;
+  align-items: flex-end;
+}
+
+.button-container:hover .button {
+  opacity: 1.0;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity .250s, background-color .250s;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+.button.disabled {
+  opacity: 0.0 !important;
+  cursor: default;
+}
+
+.position-indicators {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.position-indicators .indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.position-indicators .indicator.active {
+  background-color: white;
+}
