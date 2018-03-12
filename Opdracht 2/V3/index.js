@@ -10,14 +10,14 @@ class Scroll {
     this.handleClick = this.handleClick.bind(this)
     this.animatePosition = this.animatePosition.bind(this)
     this.setButtonState = this.setButtonState.bind(this)
-
+    
     window.addEventListener('wheel', this.handleScroll)
 
     for (var button of document.querySelectorAll('.js-scroll-button')) {
       button.addEventListener('click', this.handleClick)
     }
   }
-  
+
 
   handleScroll(event) {
     event.preventDefault()
