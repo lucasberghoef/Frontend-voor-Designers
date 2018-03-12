@@ -1,0 +1,168 @@
+/* SOURCE:
+Vertical align een div: https://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers
+*/
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+
+  font: 1.6rem sans-serif;
+  background-color: rgb(250, 250, 250);
+  margin: 0;
+}
+
+h1 {
+  color: rgb(255, 255, 255);
+  font: 3.8rem sans-serif;
+}
+
+h2 {
+  color: rgb(51, 51, 51);
+  font: 2.4rem sans-serif;
+}
+
+h5 {
+  color: rgb(29, 29, 29);
+  font: bold 1.5rem sans-serif;
+  margin: 0;
+}
+
+p {
+  color: rgb(185, 185, 185);
+  margin-top: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.container {
+  display: block;
+  position: absolute;
+  width: 100vw;
+  height: auto;
+  top: 0;
+  transition: top 1s ease-out;
+}
+
+.frame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgb(30, 30, 30);
+  background-size: cover;
+}
+
+#hero {
+  background-image:url('https://images.unsplash.com/photo-1495289972783-24a6970de403?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=03f4b660ef47a638c4bb23bea38350dc&auto=format&fit=crop&w=2551&q=80');
+}
+
+#case1 {
+  background-image:url('https://images.unsplash.com/photo-1495313378299-84a779ccc4b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3eb5d138771abd1b4831b35e87c57ba5&auto=format&fit=crop&w=2550&q=80');
+}
+
+#case2 {
+  background-image:url('https://images.unsplash.com/photo-1495313378299-84a779ccc4b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3eb5d138771abd1b4831b35e87c57ba5&auto=format&fit=crop&w=2550&q=80');
+}
+
+#case3 {
+  background-image:url('https://images.unsplash.com/photo-1495313378299-84a779ccc4b2?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3eb5d138771abd1b4831b35e87c57ba5&auto=format&fit=crop&w=2550&q=80');
+}
+
+#about {
+  background-image:url('https://images.unsplash.com/photo-1495289972783-24a6970de403?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=03f4b660ef47a638c4bb23bea38350dc&auto=format&fit=crop&w=2551&q=80');
+}
+
+.content {
+  width: 100%;
+  max-width: 640px;
+  color: white;
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 100vw;
+  min-height: 200px;
+  height: 25vh;
+}
+
+.button-container.top {
+  top: 0;
+  align-items: flex-start;
+}
+
+.button-container.bottom {
+  bottom: 0;
+  align-items: flex-end;
+}
+
+.button-container:hover .button {
+  opacity: 1.0;
+}
+
+.button {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: opacity .250s, background-color .250s;
+}
+
+.button:hover {
+  background-color: rgba(0, 0, 0, 1.0);
+}
+
+.button.disabled {
+  opacity: 0.0 !important;
+  cursor: default;
+}
+
+.position-indicators {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.position-indicators .indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.position-indicators .indicator.active {
+  background-color: white;
+}
