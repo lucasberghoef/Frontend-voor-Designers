@@ -42,7 +42,7 @@ Bij de [vijfde versie](https://github.com/lucasberghoef/Frontend-voor-Designers/
 Om de content te animeren zodra een sectie wordt getoond, wordt de sectie ook voorzien van een `active` class. Deze class start een transitie om de onderliggende content, waarna deze van opacity veranderd en naar boven beweegt via een `transform`.
 
 ## 6. Laatste styling
-Met de [zesde versie](https://github.com/lucasberghoef/Frontend-voor-Designers/tree/master/Opdracht%202/V6) [live](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%202/V6/)heb ik nog de nodige styling toegepast waaronder het gebruik van Google Fonts en het toevoegen van mijn eigen werk in plaats van de placeholder afbeeldingen die ik daarvoor gebruikte.
+Met de [zesde versie](https://github.com/lucasberghoef/Frontend-voor-Designers/tree/master/Opdracht%202/V6) [ (live)](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%202/V6/)heb ik nog de nodige styling toegepast waaronder het gebruik van Google Fonts en het toevoegen van mijn eigen werk in plaats van de placeholder afbeeldingen die ik daarvoor gebruikte.
 
 
 # To do
