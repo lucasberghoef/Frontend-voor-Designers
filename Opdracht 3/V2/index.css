@@ -1,0 +1,173 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: "Raleway", sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-size: 1.6rem;
+  font-family: sans-serif;
+  line-height: 1.5;
+  background-color: black;
+}
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 3.2rem;
+  text-transform: uppercase;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+.movie {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.movie::before {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.movie__inner {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
+  height: 245px;
+  padding: 15px;
+  opacity: 0;
+  transition: all 2s ease-out;
+  transform: translateY(-33.333%);
+}
+.movie__inner dl dt {
+  font-weight: bold;
+}
+.movie__inner dl dd {
+  margin: 0 0 1rem 0;
+}
+.movie__inner .show_plot {
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+.movie__inner .show_plot + label {
+  display: inline-block;
+  padding: 3px 6px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.movie__inner .show_plot + label::before {
+  content: "More ";
+}
+.movie__inner .show_plot:checked + label:before {
+  content: "Less ";
+}
+.movie__inner .show_plot ~ .plot--full,
+.movie__inner .show_plot:checked ~ .plot--simple {
+  display: none;
+}
+.movie__inner .show_plot:checked ~ .plot--full {
+  display: block;
+}
+.container {
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  left: 0;
+  transition: left 1s ease-in-out;
+}
+.container .frame {
+  display: inline-flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+.container .frame.active .movie__inner {
+  opacity: 1;
+}
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+}
+.button-container:hover .button {
+  opacity: 1;
+}
+.button-container .button {
+  display: inline-flex;
+  box-sizing: border-box;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+}
+.button-container .button:hover {
+  opacity: 1;
+}
+.button-container .button.disabled {
+  opacity: 0.25 !important;
+  cursor: default;
+}
+.button-container .button svg {
+  fill: white;
+}
+.button-container .button--left {
+  transform: rotate(-180deg);
+}
+.button-container .position-indicators {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.button-container .position-indicators .indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+.button-container .position-indicators .indicator.active {
+  background-color: white;
+}
