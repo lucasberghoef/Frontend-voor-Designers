@@ -25,20 +25,6 @@ body {
   line-height: 1.5;
   background-color: black;
 }
-h1,
-h2 {
-  font-family: "Oswald", sans-serif;
-  font-size: 3.2rem;
-  text-transform: uppercase;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
 .movie {
   background-repeat: no-repeat;
   background-size: cover;
