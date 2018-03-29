@@ -23,7 +23,13 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 Na het ontvangen van de opdracht ben ik begonnen met de Html te schrijven. Ik heb gekozen voor het maken van de website voor desktop en deze test ik in Safari.
 
 ## 1. Het begin
-Ik ben begonnen met...
+Ik ben begonnen met...  Dit is te zien in de [eerste versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V1/)
+
+## 2. Tweede versie
+Bij de [tweede versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V2/)
+
+## 3. Derde versie
+Bij de [derde versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V3/)
 
 # To do
 
