@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Movies Galore</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Laad lettertypen in van Google Fonts. -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald:400,500|Raleway:400,500" rel="stylesheet">
+    <link rel="stylesheet" href="/index.css"/>
+  </head>
+  <body>
+    <!-- De statische header (zonder functionaliteit) -->
+    <header class="header">
+      <h1>Movies Galore</h1>
+      <div class="hamburger"></div>
+    </header>
+
+    <!-- Omdat we de buttons gegarandeerd nodig gaan hebben worden deze alvast aangemaakt. -->
+    <div class="button-container">
+      <!-- D.m.v. het `data` attribuut kunnen we in de code een onderscheid maken tussen de knoppen. -->
+      <a href="#" class="button button--left disabled js-scroll-button" data-direction="left">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+      </a>
+      <!-- Placeholder voor de indicatoren. Deze renderen we nog niet omdat die wel afhankelijk is van de hoeveelheid data. -->
+      <ul class="position-indicators js-position-indicator"></ul>
+      <a href="#" class="button button--right js-scroll-button" data-direction="right">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z"/></svg>
+      </a>
+    </div>
+
+    <!-- Afbeelding en tekst met uitleg over de besturing van de app. -->
+    <div class="explanation">
+      <svg id="Laag_1" data-name="Laag 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360.38 227.75"><defs><style>.cls-1{fill:#fff;}</style></defs><title>keyboard arrows</title><path class="cls-1" d="M218.77,3.57H150.1a19.6,19.6,0,0,0-19.58,19.58V77.69c0,.35,0,.69,0,1h-.37V93.25a19.61,19.61,0,0,0,19.59,19.58h68.66A19.6,19.6,0,0,0,238,93.25V81.1a19.22,19.22,0,0,0,.32-3.41V23.15A19.6,19.6,0,0,0,218.77,3.57ZM236,93.25a17.6,17.6,0,0,1-17.58,17.58H149.79A17.6,17.6,0,0,1,132.2,93.25V85.59a19.61,19.61,0,0,0,17.9,11.68h68.67A19.59,19.59,0,0,0,236,86.91Zm.32-15.56c0,.35,0,.69,0,1H236V81a17.6,17.6,0,0,1-17.26,14.3H150.1a17.6,17.6,0,0,1-17.58-17.58V23.15A17.6,17.6,0,0,1,150.1,5.57h68.67a17.6,17.6,0,0,1,17.58,17.58Z" transform="translate(-4.97 -3.57)"/><path class="cls-1" d="M164.86,64.87H204L184.43,31Zm3.47-2L184.43,35l16.11,27.9Z" transform="translate(-4.97 -3.57)"/><path class="cls-1" d="M365.22,197.16c0-.4.06-.79.06-1.18V141.44a19.6,19.6,0,0,0-19.58-19.58H277a19.61,19.61,0,0,0-19.59,19.58V196c0,.44,0,.88.07,1.33v14.38a19.6,19.6,0,0,0,19.58,19.58h68.67a19.6,19.6,0,0,0,19.58-19.58V197.16ZM259.45,141.44A17.61,17.61,0,0,1,277,123.86H345.7a17.6,17.6,0,0,1,17.58,17.58V196a17.6,17.6,0,0,1-17.58,17.58H277a17.6,17.6,0,0,1-17.52-16.25v-.15h0c0-.4-.06-.79-.06-1.18Zm86.32,87.83H277.1a17.6,17.6,0,0,1-17.58-17.58v-7A19.58,19.58,0,0,0,277,215.56H345.7a19.59,19.59,0,0,0,17.65-11.16v7.29A17.6,17.6,0,0,1,345.77,229.27Z" transform="translate(-4.97 -3.57)"/><polygon class="cls-1" points="292.95 147.3 292.95 182.98 323.85 165.14 292.95 147.3"/><path class="cls-1" d="M93.26,121.86H24.59A19.6,19.6,0,0,0,5,141.44V196c0,.41,0,.82.07,1.23H5v14.53a19.6,19.6,0,0,0,19.58,19.58H93.21a19.61,19.61,0,0,0,19.59-19.58V197.21h0c0-.41.06-.82.06-1.23V141.44A19.6,19.6,0,0,0,93.26,121.86Zm17.54,89.88a17.61,17.61,0,0,1-17.59,17.58H24.55A17.6,17.6,0,0,1,7,211.74v-7.29a19.59,19.59,0,0,0,17.62,11.11H93.26a19.6,19.6,0,0,0,17.54-10.93Zm0-15.76a17.6,17.6,0,0,1-17.58,17.58H24.59A17.6,17.6,0,0,1,7,196V141.44a17.6,17.6,0,0,1,17.58-17.58H93.26a17.6,17.6,0,0,1,17.58,17.58Z" transform="translate(-4.97 -3.57)"/><polygon class="cls-1" points="67.41 182.98 67.41 147.3 36.51 165.14 67.41 182.98"/><path class="cls-1" d="M218.77,121.86H150.1a19.6,19.6,0,0,0-19.58,19.58V196c0,.39,0,.78.06,1.18h-.06v14.53a19.6,19.6,0,0,0,19.58,19.58h68.67a19.6,19.6,0,0,0,19.58-19.58V197.16h-.06c0-.4.06-.79.06-1.18V141.44A19.6,19.6,0,0,0,218.77,121.86Zm17.58,89.83a17.6,17.6,0,0,1-17.58,17.58H150.1a17.6,17.6,0,0,1-17.58-17.58v-7.15a19.6,19.6,0,0,0,17.58,11h68.67a19.6,19.6,0,0,0,17.58-11Zm0-15.71a17.6,17.6,0,0,1-17.58,17.58H150.1A17.6,17.6,0,0,1,132.52,196V141.44a17.6,17.6,0,0,1,17.58-17.58h68.67a17.6,17.6,0,0,1,17.58,17.58Z" transform="translate(-4.97 -3.57)"/><path class="cls-1" d="M184.43,188.16,204,154.26H164.86Zm0-4-16.1-27.9h32.21Z" transform="translate(-4.97 -3.57)"/></svg>
+      <p>Use your arrow keys to browse through the movies.</p>
+    </div>
+
+    <!-- Hier wordt het grootste deel van de applicatie in weergegeven. -->
+    <div id="app" class="container js-scroll-container">
+      <!-- UI Stack loading status. Wordt overschreven zodra er (valide) data beschikbaar is. -->
+      <span class="loading">Loading...</span>
+    </div>
+
+    <script src="/index.js"></script>
+  </body>
+</html>

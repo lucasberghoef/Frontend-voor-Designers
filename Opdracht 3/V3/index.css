@@ -1,0 +1,363 @@
+* {
+  /* Stel anti-aliasing in zodat tekst er mooier uit ziet. */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Voorkom dat de gebruiker inhoud kan selecteren. */
+  -moz-user-select: -moz-none;
+  -khtml-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+
+  /* Stel het standaard font in. */
+  font-family: "Raleway", sans-serif;
+}
+
+html {
+  /* Maakt 1rem 10 pixels */
+  font-size: 62.5%;
+}
+
+body {
+  display: block;
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  /* Verberg `overflow` zodat de niet actieve slides verborgen worden. */
+  overflow: hidden;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  background-color: black;
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+h1 {
+  font-size: 2.8rem;
+  font-weight: 400;
+  letter-spacing: 0.3rem;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 4.8rem;
+  font-weight: 500;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+#app {
+  /* Maak deze div minstens 100% breed, ook als er nog niets in zit. */
+  min-width: 100vw;
+}
+
+#app .loading {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.header {
+  display: flex;
+  box-sizing: border-box;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  width: 100vw;
+  height: 6.4rem;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  padding: 0 15px;
+  color: white;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.33);
+}
+
+.header .hamburger {
+  display: block;
+  position: relative;
+  width: 2.8rem;
+  height: 2px;
+  background-color: white;
+}
+
+.header .hamburger::before,
+.header .hamburger::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.header .hamburger::before {
+  top: -1rem;
+}
+
+.header .hamburger::after {
+  bottom: -1rem;
+}
+
+.movie {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+
+.movie::before {
+  /*
+    Leg een pseudo element over de afbeelding heen,
+    zodat ik deze donker kan maken.
+  */
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.movie__inner {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  max-width: 760px;
+  /* Stel een vaste hoogte in zodat overflow naar onder wordt geduwd.*/
+  height: 245px;
+  padding: 15px;
+  opacity: 0;
+  transition: opacity 1s ease-out;
+  transform: translateY(-33.333%);
+}
+
+.movie__inner dl dt {
+  font-weight: bold;
+}
+
+.movie__inner dl dd {
+  margin: 0 0 1rem 0;
+}
+
+.movie__inner .show_plot {
+  /* Het input element waarmee het plot wordt gewisseld. */
+  position: absolute;
+  left: -9999px;
+  top: -9999px;
+}
+
+.movie__inner .show_plot + label {
+  display: inline-block;
+  position: relative;
+  padding: 3px 6px;
+  color: white;
+  border: 1px solid white;
+  cursor: pointer;
+}
+
+.movie__inner .show_plot + label::before {
+  content: "More ";
+}
+
+.movie__inner .show_plot:checked + label::before {
+  content: "Less ";
+}
+
+.movie__inner .show_plot + label::after {
+  display: block;
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  /* Gebruik als opacity 0.01 vanwege animaties. */
+  opacity: 0.01;
+  border: 1px solid white;
+}
+
+.movie__inner .show_plot + label:hover::after {
+  animation-name: pulse;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+    opacity: 0.01;
+  }
+  50% {
+    width: calc(100% + 1.5rem);
+    height: calc(100% + 1.5rem);
+    opacity: 0.75;
+  }
+  75% {
+    width: calc(100% + 1.5rem);
+    height: calc(100% + 1.5rem);
+    opacity: 0.01;
+  }
+  100% {
+    width: calc(100% + 0px);
+    height: calc(100% + 0px);
+  }
+}
+
+/*
+  Verberg de plot elementen bij de corrrecte states:
+  - show_plot niet aangevinkt: verberg `plot--full`
+  - show_plot wel aangevinkt: verberg `plot--simple`
+*/
+.movie__inner .show_plot ~ .plot--full,
+.movie__inner .show_plot:checked ~ .plot--simple {
+  display: none;
+}
+
+/* Toon het volledige plot zodra show_plot is aangevinkt. */
+.movie__inner .show_plot:checked ~ .plot--full {
+  display: block;
+}
+
+.movie.active .movie__inner {
+  opacity: 1;
+  transition: opacity 1s ease-out 1s;
+}
+
+.container {
+  display: flex;
+  position: absolute;
+  width: auto;
+  height: 100vh;
+  left: 0;
+  transition: left 1s ease-in-out;
+  /* Activeer GPU acceleratie voor mooiere transities. */
+  transform: translateZ(0);
+  will-change: left;
+}
+
+.container .frame {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: #fff;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  width: 100vw;
+}
+
+.button-container .button {
+  display: inline-flex;
+  box-sizing: border-box;
+  height: auto;
+  padding: 15px;
+  margin: 15px;
+  opacity: 0.75;
+  transition: opacity 0.25s;
+}
+
+.button-container .button:hover {
+  opacity: 1;
+}
+
+.button-container .button.disabled {
+  opacity: 0.25 !important;
+  cursor: default;
+}
+
+.button-container .button svg {
+  fill: white;
+}
+
+.button-container .button--left {
+  transform: rotate(-180deg);
+}
+
+.button-container .position-indicators {
+  display: inline-flex;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.button-container .position-indicators .indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.button-container .position-indicators .indicator.active {
+  background-color: white;
+}
+
+.explanation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: fixed;
+  left: 50%;
+  bottom: 8rem;
+  transform: translateX(-50%);
+  z-index: 100;
+  color: white;
+  opacity: 0.01;
+  animation-name: fadein;
+  animation-duration: 8s;
+  animation-timing-function: linear;
+}
+
+.explanation svg {
+  width: 16rem;
+  height: auto;
+}
+
+@keyframes fadein {
+  0% {
+    opacity: 0.01;
+  }
+  25% {
+    opacity: 0.01;
+  }
+  50% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.01;
+  }
+}
