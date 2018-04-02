@@ -29,10 +29,19 @@ Vervolgens heb ik zelf grote afbeeldingen op het internet gezocht om als achterg
 
 Verder heb ik ook de indicators van opdracht 2 gebruikt. Ook heb ik alvast Google Fonts ingeladen om de tekst vorm te geven in mijn gewenste lettertypen. Door middel van de 'More spoilers' en 'Less spoilers' knop kan de gebruiker het uitgebreidere of kortere plot van de films zien.
 
+UI stack: Ik heb de loading state en de ideal state vormgegeven, wanneer de data nog wordt geladen is er 'Loading...' midden in het scherm te zien, zodra deze klaar is wordt de ideal state getoond.
+
 
 ## 2. Tweede versie
-Bij de [tweede versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V2/) heb ik zelf grote afbeeldingen op het internet gezocht om te als achtergrond afbeeldingen te gebruiken. Dit was nodig omdat de afbeeldingen van de database van Dennis niet toegankelijk zijn, hierdoor werden deze niet weergegeven. Ook heb ik in de tweede versie de caroussel van opdracht 2 toegepast, echter dit keer horizontaal i.p.v. verticaal. Dit maal moest ik alleen de inhoud van de slides uit de data halen, de data bepaald ook hoeveel slides er worden aangemaakt.
+Bij de [tweede versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V2/) heb ik het ontwerp verbeterd gebasseerd op de feedback die ik kreeg van klasgenoten en vrienden/familie bij het testen van het eerste ontwerp.
 
+* Feedback: Het ziet er nog niet uit als een website. - Verbetering: Door het toevoegen van een header met daarin het 'logo' van de website en een burger menu icon heb ik het ontwerp een kenmerkend aspect van de meeste website gegeven.
+* Feedback: De animatie voelt niet soepel aan. - Verbetering: Ik heb de animatie iets versneld en getweakd, ik heb de "in" animatie versneld en uitgesteld, zodat deze pas later gebeurt bij het wisselen van de carrousel.
+* Feedback: de animatie hapert. - Verbetering: Door 3d acceleratie heb ik de animatie smoother gemaakt, dit heb ik gedaan door `translate: Z` toe te voegen aan de code, hierdoor wordt de animatie beter gerenderd. 
+* Feedback: De 'More spoilers' knop ziet er nog niet genoeg als een knop uit, dit moet volgens principle 9 "Appearance follows behavior" wel - Verbetering: Ik heb voor de knop een hover state ingesteld waarbij `curser: pointer` en een pulserende animatie de gebruiker bij het hoveren duidelijk maken dat het een knop is.
+* Feedback: Volgens principle 4 "Keep users in control" moet je soms het overduidelijke toch vertellen, dit mist bij het gebruiken van het toetsenbord. - Verbetering: Door de gebruiker een uitleg te tonen (na dat alle andere content al getoond is, zodat hier de aandacht op wordt gefocust) dat de website met het toetsenbord kan worden bediend kan elke gebruiker zien dat de website zo kan worden bediend.
+
+Zelf heb ik na het toevoegen van de header geconstateerd dat principle 11 "Strong visual hierarchies work best" minder duidelijk werd omdat het 'logo' van de website hetzelfde lettergrootte en font was als de titels van de films. Daarom heb ik de titels van de films groter gemaakt en lowercase i.p.v. uppercase, en het 'logo' een dunner font en letter spacing gegeven zodat deze duidelijk anders is. Zo is de hierachy nog duidelijker.
 
 
 # License
