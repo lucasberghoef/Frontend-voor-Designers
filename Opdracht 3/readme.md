@@ -23,7 +23,7 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 Na het ontvangen van de opdracht ben ik begonnen met de Html te schrijven. Ik heb gekozen voor het maken van de website voor desktop en deze test ik in Safari.
 
 ## 1. Eerste versie
-Ik ben begonnen met het opzetten van de html en vervolgens heb ik de data ingeladen van de website van Dennis. Omdat de https verbinding van Github Pages geen verbinding wil maken met de http van de site 'http://dennistel.nl/movies' heb ik de data zelf op github gezet in een JSON zodat de Github Pages wel werkt. Dit is te zien in de [eerste versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V1/).
+Ik ben begonnen met het opzetten van de html en vervolgens heb ik de data ingeladen van de website van Dennis. Omdat de https verbinding van Github Pages geen verbinding wil maken met de http van de site `http://dennistel.nl/movies` heb ik de data zelf op github gezet in een JSON zodat de Github Pages wel werkt. Dit is te zien in de [eerste versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V1/).
 
 Vervolgens heb ik zelf grote afbeeldingen op het internet gezocht om als achtergrond afbeeldingen te gebruiken. Dit was nodig omdat de afbeeldingen van de database van Dennis niet toegankelijk zijn (deze kunnen alleen via een directe link worden bekeken en niet door externe website worden gebruikt), hierdoor werden deze niet weergegeven. Ook heb ik de caroussel van opdracht 2 toegepast, echter dit keer horizontaal i.p.v. verticaal. Dit maal moest ik alleen de inhoud van de slides uit de data halen, de data bepaald ook hoeveel slides er worden aangemaakt.
 
