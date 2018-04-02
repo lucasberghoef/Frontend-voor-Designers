@@ -1,7 +1,7 @@
 class App {
   constructor(el) { // #app
     this.el = document.querySelector(el)
-    this.url = '/Frontend-voor-Designers/Opdracht%203/V3/data.json'
+    this.url = '/Frontend-voor-Designers/Opdracht%203/V2/data.json'
 
     /*
       Omdat IMDB toegang blokkeert moet ik zelf afbeeldingen definieren.
