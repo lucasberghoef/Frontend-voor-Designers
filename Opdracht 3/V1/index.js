@@ -1,7 +1,7 @@
 class App {
   constructor(el) {
     this.el = document.querySelector(el)
-    this.url = 'http://dennistel.nl/movies.json'
+    this.url = '/Frontend-voor-Designers/Opdracht%203/V1/data.json'
 
     this.backgrounds = [
       'https://i.ytimg.com/vi/gizo8gXsgOc/maxresdefault.jpg',
