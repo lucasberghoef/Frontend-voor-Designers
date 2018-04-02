@@ -26,7 +26,7 @@ Na het ontvangen van de opdracht ben ik begonnen met de Html te schrijven. Ik he
 Ik ben begonnen met...  Dit is te zien in de [eerste versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V1/)
 
 ## 2. Tweede versie
-Bij de [tweede versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V2/)
+Bij de [tweede versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V2/) heb ik zelf grote afbeeldingen op het internet gezocht om te als achtergrond afbeeldingen te gebruiken. Dit was nodig omdat de afbeeldingen van de database van Dennis niet toegankelijk zijn, hierdoor werden deze niet weergegeven. Ook heb ik in de tweede versie de caroussel van opdracht 2 toegepast, echter dit keer horizontaal i.p.v. verticaal. Dit maal moest ik alleen de inhoud van de slides uit de data halen, de data bepaald ook hoeveel slides er worden aangemaakt.
 
 ## 3. Derde versie
 Bij de [derde versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V3/)
