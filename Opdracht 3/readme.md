@@ -20,7 +20,7 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 
 # Mijn proces
 
-Na het ontvangen van de opdracht ben ik begonnen met de Html te schrijven. Ik heb gekozen voor het maken van de website voor desktop en deze test ik in Safari.
+Ik heb gekozen voor het maken van de website voor desktop en deze test ik in Safari.
 
 ## 1. Eerste versie
 Ik ben begonnen met het opzetten van de html en vervolgens heb ik de data ingeladen van de website van Dennis. Omdat de https verbinding van Github Pages geen verbinding wil maken met de http van de site `http://dennistel.nl/movies` heb ik de data zelf op github gezet in een JSON zodat de Github Pages wel werkt. Dit is te zien in de [eerste versie](https://lucasberghoef.github.io/Frontend-voor-Designers/Opdracht%203/V1/).
