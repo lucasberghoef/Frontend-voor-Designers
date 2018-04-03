@@ -10,6 +10,8 @@ Hierbij heb ik de volgende voorbeelden gebruikt:
 
 * Principles van User Interface Design: https://codepen.io/KoopReynders/pen/KdEagB?editors=0010
 
+* Data van Dennis Tel: http://dennistel.nl/movies
+
 ![Voorvertoning van de film site](preview.png)
 
 # Functies
