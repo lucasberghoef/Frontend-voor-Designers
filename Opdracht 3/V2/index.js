@@ -4,7 +4,7 @@ class App {
     this.url = '/Frontend-voor-Designers/Opdracht%203/V2/data.json'
 
     /*
-      Omdat IMDB toegang blokkeert moet ik zelf afbeeldingen definieren.
+      Omdat de afbeeldinge te klein zijn moet ik zelf afbeeldingen definieren.
       Dit doe ik in een array, zodat ik later de afbeelding door middel van de
       index weer kan ophalen.
     */
