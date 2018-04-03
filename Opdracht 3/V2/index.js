@@ -5,8 +5,8 @@ class App {
 
     /*
       Omdat IMDB toegang blokkeert moet ik zelf afbeeldingen definieren.
-      Dit doen we in een array, zodat ik later de afbeelding door middel van de
-      index weer op kan halen.
+      Dit doe ik in een array, zodat ik later de afbeelding door middel van de
+      index weer kan ophalen.
     */
     this.backgrounds = [
       'https://i.ytimg.com/vi/gizo8gXsgOc/maxresdefault.jpg',
